@@ -2,21 +2,18 @@
 echo hello world
 x=1
 y=1
-j=300
-while [ $x -le 500 ]
+j=1
+while [ $x -le 2 ]
 do
   echo "Welcome $x times"
-  string=Performance_Br_$((x))
+  string=AA_PR_$((x))
   git branch $string
-  git checkout $string
-while [ $y -le 200 ]
-do
-  string="touch randfile$((j+x)) && git add . && git commit -m '$((j+x)):randfile_$((j+x))'"
-  y=$(( $y + 1 ))
-done
-  git push
+  git checkout -b $string
+  git push -u origin $string
   git push --set-upstream origin $string
+  #git push -u origin $string
   echo $string
-  sleep 2.0
   x=$(( $x + 1 ))
+  sh ./createCOmmit.sh
 done
+
