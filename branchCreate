@@ -1,0 +1,22 @@
+#!/bin/bash
+echo hello world
+x=1
+y=1
+j=300
+while [ $x -le 500 ]
+do
+  echo "Welcome $x times"
+  string=Performance_Br_$((x))
+  git branch $string
+  git checkout $string
+while [ $y -le 200 ]
+do
+  string="touch randfile$((j+x)) && git add . && git commit -m '$((j+x)):randfile_$((j+x))'"
+  y=$(( $y + 1 ))
+done
+  git push
+  git push --set-upstream origin $string
+  echo $string
+  sleep 2.0
+  x=$(( $x + 1 ))
+done
