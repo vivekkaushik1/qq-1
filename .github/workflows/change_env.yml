@@ -22,7 +22,14 @@ jobs:
       
       - name: Maven Build
         run: mvn clean install -DskipTests=true
-      
+  deployment1:
+    environment: PROD
+    needs: build
+    name: Deployment1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment1 
+        run: echo Run PROD deployment.      
   deploy:
     environment: PROD
     needs: build
