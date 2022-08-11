@@ -34,10 +34,69 @@ jobs:
 
   deploy1:
     environment: PROD1
-    needs: build
+    needs: deploy
     name: Deployment1
     runs-on: ubuntu-latest
     steps:
       - name: Deployment 
         run: echo Run PROD deployment
  
+  deploy2:
+    environment: PROD2
+    needs: deploy1
+    name: Deployment2
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment 
+
+  deploy3:
+    environment: PROD3
+    needs: deploy2
+    name: Deployment3
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment 
+        run: echo Run PROD deployment        
+  deploy4:
+    environment: PROD4
+    needs: deploy3
+    name: Deployment4
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment 
+        run: echo Run PROD deployment 
+  deploy5:
+    environment: PROD5
+    needs: deploy4
+    name: Deployment5
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment 
+        run: echo Run PROD deployment
+   
+  deploy6:
+    environment: PROD5
+    needs: deploy5
+    name: Deployment6
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment 
+        run: echo Run PROD deployment
+   
+  deploy7:
+    environment: PROD6
+    needs: deploy6
+    name: Deployment7
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment 
+        run: echo Run PROD deployment
+
+  deploy8:
+    environment: PROD7
+    needs: deploy7
+    name: Deployment8
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment 
+        run: echo Run PROD deployment.
