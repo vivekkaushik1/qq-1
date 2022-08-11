@@ -41,18 +41,11 @@ jobs:
       - name: Deployment1 
         run: echo Run PROD deployment.  
  
-  deployment3:
-    environment: PROD1
-    needs: build
-    name: Deployment3
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deployment3 
-        run: echo Run PROD deployment.  
+  
 
   deploy:
     environment: PROD
-    needs: deployment3
+    needs: deployment2
     name: Deployment
     runs-on: ubuntu-latest
     steps:
