@@ -1,9 +1,11 @@
 name: change_env
+
 on:
   push:
     branches:
       - main
       - '**'
+  workflow_dispatch:
 
 jobs:
   build:
@@ -28,5 +30,74 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deployment 
-        run: echo Run PROD deployment.
+        run: echo Run PROD deployment
 
+  deploy1:
+    environment: PROD
+    needs: build
+    name: Deployment1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment 
+        run: echo Run PROD deployment
+  deploy2:
+    environment: PROD
+    needs: build
+    name: Deployment2
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment 
+
+  deploy3:
+    environment: PROD
+    needs: build
+    name: Deployment3
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment 
+        run: echo Run PROD deployment 
+
+   deploy4:
+    environment: PROD
+    needs: build
+    name: Deployment4
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment 
+        run: echo Run PROD deployment.        
+
+   deploy5:
+    environment: PROD
+    needs: build
+    name: Deployment5
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment 
+        run: echo Run PROD deployment
+   
+   deploy6:
+    environment: PROD
+    needs: build
+    name: Deployment6
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment 
+        run: echo Run PROD deployment
+   
+   deploy7:
+    environment: PROD
+    needs: build
+    name: Deployment7
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment 
+        run: echo Run PROD deployment
+
+   deploy8:
+    environment: PROD
+    needs: build
+    name: Deployment8
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment 
+        run: echo Run PROD deployment. 
