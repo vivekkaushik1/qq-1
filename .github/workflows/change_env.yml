@@ -49,12 +49,4 @@ jobs:
     steps:
       - name: Deployment2 
 
-  deploy3:
-    environment: PROD3
-    needs: deploy2
-    name: Deployment3
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deployment3 
-        run: echo Run PROD3 deployment        
   
