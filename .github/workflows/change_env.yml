@@ -65,38 +65,4 @@ jobs:
     steps:
       - name: Deployment 
         run: echo Run PROD deployment 
-  deploy5:
-    environment: PROD5
-    needs: deploy4
-    name: Deployment5
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deployment 
-        run: echo Run PROD deployment
-   
-  deploy6:
-    environment: PROD5
-    needs: deploy5
-    name: Deployment6
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deployment 
-        run: echo Run PROD deployment
-   
-  deploy7:
-    environment: PROD6
-    needs: deploy6
-    name: Deployment7
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deployment 
-        run: echo Run PROD deployment
 
-  deploy8:
-    environment: PROD7
-    needs: deploy7
-    name: Deployment8
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deployment 
-        run: echo Run PROD deployment.
