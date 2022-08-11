@@ -38,7 +38,7 @@ jobs:
     name: Deployment1
     runs-on: ubuntu-latest
     steps:
-      - name: Deployment 
+      - name: Deployment1
         run: echo Run PROD deployment
  
   deploy2:
@@ -47,7 +47,7 @@ jobs:
     name: Deployment2
     runs-on: ubuntu-latest
     steps:
-      - name: Deployment 
+      - name: Deployment2 
 
   deploy3:
     environment: PROD3
@@ -55,7 +55,7 @@ jobs:
     name: Deployment3
     runs-on: ubuntu-latest
     steps:
-      - name: Deployment 
+      - name: Deployment3 
         run: echo Run PROD deployment        
   deploy4:
     environment: PROD4
@@ -63,6 +63,41 @@ jobs:
     name: Deployment4
     runs-on: ubuntu-latest
     steps:
-      - name: Deployment 
+      - name: Deployment4 
         run: echo Run PROD deployment 
 
+  deploy5:
+    environment: PROD5
+    needs: deploy4
+    name: Deployment5
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment5 
+        run: echo Run PROD deployment
+   
+  deploy6:
+    environment: PROD5
+    needs: deploy5
+    name: Deployment6
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment6 
+        run: echo Run PROD deployment
+   
+  deploy7:
+    environment: PROD6
+    needs: deploy6
+    name: Deployment7
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment7 
+        run: echo Run PROD deployment
+
+  deploy8:
+    environment: PROD7
+    needs: deploy7
+    name: Deployment8
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment8 
+        run: echo Run PROD deployment.
