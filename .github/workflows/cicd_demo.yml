@@ -1,4 +1,4 @@
-name: change_env
+name: cicd_demo
 
 on:
   push:
