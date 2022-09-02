@@ -7,7 +7,7 @@ while [ $x -le 2 ]
    sh ./createCOmmitsTags.sh
    git pull
    x=$(( $x + 1 ))
-   git merge
+   #git merge
    echo "Completed Script Invocaton"
 done
 #git push
